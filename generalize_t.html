@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>某用户平台</title>
+    <title>LOGO</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
@@ -17,14 +17,14 @@
     <!-- Bootstrap 3.3.7 -->
     <!-- Font Awesome 图标字体库和CSS框架-->
     <link rel="stylesheet" href="https://static01.tengwen.com/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com/backend/vip/css/css.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com//backend/vip/css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/media.css">
     <!--<script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/cookies.min.js"></script>-->
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/jquery.qrcode.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/clipboard.min.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/klorofil-common.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/comm.js"></script>
+    <script type="text/javascript" src="./js/klorofil-common.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/moment.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/moment_zh-cn.js"></script>
     <link rel="stylesheet" href="https://static01.tengwen.com/common/bootstrap-datetimepicker-4.17.min.css">
@@ -33,24 +33,26 @@
 
 </head>
 
+
 <body>
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#3c8dbc">
-            <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src="http://img5.duitang.com/uploads/item/201410/02/20141002101348_djJU2.thumb.700_0.jpeg"
-                        alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div>
+        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#2a3747">
+            <!-- <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src=""
+                                alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div> -->
             <div class="container-fluid">
+
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-list" aria-hidden="true" style="color: #fff;"></i>
+                    <button type="button" class="btn-toggle-fullwidth"><img src="./images/sidebar@2x.png" alt=""></i>
                     </button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <!--           <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="https://static01.tengwen.com/backend/vip/img/user.png"
-                                    class="img-circle" alt="Avatar">
-                                <span>某某互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <!-- <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./images/headshot@2x.png"
+                                    alt="">
+                                <span style="color:#f1f1f1;">哇嘎互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/admin/index"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
                                 </li>
@@ -61,19 +63,22 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav> <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
         <div id="sidebar-nav" class="sidebar">
-            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;">
+            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;background-color:#354051;">
                 <nav>
                     <ul class="nav">
-                        <li><a href="./qudaoliebiao.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span
-                            class="menu-span">渠道列表</span></a></li>
-                <li><a href="./tuiguangshouru.html" class="active"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">推广收入</span></a></li>
-                <li><a href="./tixianmingxi.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">提现明细</span></a></li>
-                <li><a href="./hebingzhifu.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">合并支付</span></a></li>
-                <li><a href="./fenliulianjie.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">分流链接</span></a></li>
+                        <li><a href="./channel_q.html"><img src="./images/list@2x.png" alt="" class="png_wj"></i><span
+                                    class="menu-span">渠道列表</span></a></li>
+                        <li><a href="./generalize_t.html" class="active"><img src="./images/promotion@2x.png" alt=""
+                                    class="png_wj"><span class="menu-span">推广收入</span></a></li>
+                        <li><a href="./withdraw_tx.html"><img src="./images/withdrawal@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">提现明细</span></a></li>
+                        <li><a href="./merge_h.html"><img src="./images/merge@2x.png" alt="" class="png_wj"><span class="menu-span">合并支付</span></a></li>
+                        <li><a href="./shunt_f.html"><img src="./images/shunt@2x.png" alt="" class="png_wj"><span class="menu-span">分流链接</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -139,9 +144,9 @@
                                 <div class="form-group">
                                     <select name="seruid" class="form-control">
                                         <option value="">全部</option>
-                                        <option value="20039">小一书吧</option>
-                                        <option value="20040">小二文学</option>
-                                        <option value="20041">小三书吧</option>
+                                        <option value="20039">鸭鸭书吧</option>
+                                        <option value="20040">小丫文学</option>
+                                        <option value="20041">核桃书吧</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -153,7 +158,7 @@
                                         placeholder="结束日期">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn " style="background-color:#3c8dbc;color:#fff;">查询</button>
+                                    <button type="submit" class="btn " style="background-color:#52627d;color:#fff;">查询</button>
                                 </div>
                             </form>
                             <table class="table table-striped table-hover table-bordered">
@@ -171,238 +176,127 @@
                                 <tbody>
                                     <tr>
                                         <td>2018-11-12</td>
-                                        <td>小一书吧</td>
+                                        <td>鸭鸭书吧</td>
                                         <td>8</td>
-                                        <td>￥ 529</td>
+                                        <td class="text-danger">￥ 529</td>
                                         <td>90%</td>
-                                        <td>￥ 476.1</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-12</td>
-                                        <td>小二书吧</td>
-                                        <td>15</td>
-                                        <td>￥ 650</td>
-                                        <td>90%</td>
-                                        <td>￥ 585</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-11</td>
-                                        <td>小三书吧</td>
-                                        <td>33</td>
-                                        <td>￥ 712</td>
-                                        <td>90%</td>
-                                        <td>￥ 640.8</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-11</td>
-                                        <td>小四书吧</td>
-                                        <td>9</td>
-                                        <td>￥ 326</td>
-                                        <td>90%</td>
-                                        <td>￥ 293.4</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-10</td>
-                                        <td>小五书吧</td>
-                                        <td>19</td>
-                                        <td>￥ 465</td>
-                                        <td>90%</td>
-                                        <td>￥ 418.5</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-10</td>
-                                        <td>小六书吧</td>
-                                        <td>62</td>
-                                        <td>￥ 1179</td>
-                                        <td>90%</td>
-                                        <td>￥ 1061.1</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-09</td>
-                                        <td>小七书吧</td>
-                                        <td>31</td>
-                                        <td>￥ 1327</td>
-                                        <td>90%</td>
-                                        <td>￥ 1194.3</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-09</td>
-                                        <td>小八书吧</td>
-                                        <td>107</td>
-                                        <td>￥ 1955</td>
-                                        <td>90%</td>
-                                        <td>￥ 1759.5</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-08</td>
-                                        <td>小九书吧</td>
-                                        <td>27</td>
-                                        <td>￥ 1250</td>
-                                        <td>90%</td>
-                                        <td>￥ 1125</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-08</td>
-                                        <td>小石书吧</td>
-                                        <td>13</td>
-                                        <td>￥ 600</td>
-                                        <td>90%</td>
-                                        <td>￥ 540</td>
+                                        <td class="text-danger">￥ 476.1</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-07</td>
-                                        <td>事宜书吧</td>
-                                        <td>4</td>
-                                        <td>￥ 200</td>
-                                        <td>90%</td>
-                                        <td>￥ 180</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-07</td>
-                                        <td>事儿书吧</td>
+                                        <td>核桃书吧</td>
                                         <td>21</td>
-                                        <td>￥ 1718</td>
+                                        <td class="text-danger">￥ 1718</td>
                                         <td>90%</td>
-                                        <td>￥ 1546.2</td>
+                                        <td class="text-danger">￥ 1546.2</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-06</td>
-                                        <td>失散书吧</td>
+                                        <td>鸭鸭书吧</td>
                                         <td>5</td>
-                                        <td>￥ 239.9</td>
+                                        <td class="text-danger">￥ 239.9</td>
                                         <td>90%</td>
-                                        <td>￥ 215.91</td>
+                                        <td class="text-danger">￥ 215.91</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-06</td>
-                                        <td>誓死书吧</td>
+                                        <td>核桃书吧</td>
                                         <td>20</td>
-                                        <td>￥ 1149</td>
+                                        <td class="text-danger">￥ 1149</td>
                                         <td>90%</td>
-                                        <td>￥ 1034.1</td>
+                                        <td class="text-danger">￥ 1034.1</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-05</td>
-                                        <td>失误书吧</td>
+                                        <td>鸭鸭书吧</td>
                                         <td>6</td>
-                                        <td>￥ 290</td>
+                                        <td class="text-danger">￥ 290</td>
                                         <td>90%</td>
-                                        <td>￥ 261</td>
+                                        <td class="text-danger">￥ 261</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-05</td>
-                                        <td>石榴书吧</td>
+                                        <td>核桃书吧</td>
                                         <td>10</td>
-                                        <td>￥ 420</td>
+                                        <td class="text-danger">￥ 420</td>
                                         <td>90%</td>
-                                        <td>￥ 378</td>
+                                        <td class="text-danger">￥ 378</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-04</td>
-                                        <td>时期书吧</td>
+                                        <td>核桃书吧</td>
                                         <td>27</td>
-                                        <td>￥ 1659</td>
+                                        <td class="text-danger">￥ 1659</td>
                                         <td>90%</td>
-                                        <td>￥ 1493.1</td>
+                                        <td class="text-danger">￥ 1493.1</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-04</td>
-                                        <td>十八书吧</td>
+                                        <td>鸭鸭书吧</td>
                                         <td>7</td>
-                                        <td>￥ 310</td>
+                                        <td class="text-danger">￥ 310</td>
                                         <td>90%</td>
-                                        <td>￥ 279</td>
+                                        <td class="text-danger">￥ 279</td>
                                         <td>
                                             <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2018-11-03</td>
-                                        <td>施救书吧</td>
+                                        <td>鸭鸭书吧</td>
                                         <td>17</td>
-                                        <td>￥ 328.9</td>
+                                        <td class="text-danger">￥ 328.9</td>
                                         <td>90%</td>
-                                        <td>￥ 296.01</td>
+                                        <td class="text-danger">￥ 296.01</td>
                                         <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-11-03</td>
-                                        <td>而是书吧</td>
-                                        <td>49</td>
-                                        <td>￥ 986.6</td>
-                                        <td>90%</td>
-                                        <td>￥ 887.94</td>
-                                        <td>
-                                            <span class="label" style="background-color:#ffc425;color:#fff;">未提现</span>
+                                            <span class="label" style="background-color:#46699f;color:#fff;">已提现</span>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div data-pagination="pagination_new" data-pagenumber="1" data-paginationurl="/pay/index?page=customize_page_num"
-                                data-totalnumber="6" data-paginationmax="6" style="float: right;">
+                            <div data-pagination="pagination_new" data-pagenumber="1" data-paginationurl=""
+                                data-totalnumber="5" data-paginationmax="5" style="float: right;">
                                 <ul class="pagination">
-                                    <li value="pre" style="display: inline-block;"><a href="/pay/index?page=1">首页</a></li>
-                                    <li value="1" class="active" style="display: inline-block;"><a href="/pay/index?page=1">1</a></li>
-                                    <li value="2" style="display: inline-block;"><a href="/pay/index?page=2">2</a></li>
-                                    <li value="3" style="display: inline-block;"><a href="/pay/index?page=3">3</a></li>
-                                    <li value="4" style="display: inline-block;"><a href="/pay/index?page=4">4</a></li>
-                                    <li value="5" style="display: inline-block;"><a href="/pay/index?page=5">5</a></li>
-                                    <li value="6" style="display: inline-block;"><a href="/pay/index?page=6">6</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="javascript:void(0);">»</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="/pay/index?page=6">尾页</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -426,7 +320,7 @@
             "debug": false,
             "newestOnTop": false,
             "progressBar": false,
-            "positionClass": "toast-top-center", //toast-top-center toast-bottom-center
+            "positionClass": "toast-top-center", //toast-top-center toast-bottom-center,
             "preventDuplicates": false,
             "onclick": null,
             "showDuration": "300",
@@ -464,10 +358,9 @@
             $('.datetimepicker').datetimepicker(datetimepickerSetting)
         })
     </script>
-    <script src="https://static01.tengwen.com/common/paginate.js"></script>
+    <!-- <script src="https://static01.tengwen.com/common/paginate.js"></script> -->
 
 
 </body>
-
 
 </html>

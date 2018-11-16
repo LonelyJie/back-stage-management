@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>某用户平台</title>
+    <title>LOGO</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
@@ -17,14 +17,14 @@
     <!-- Bootstrap 3.3.7 -->
     <!-- Font Awesome 图标字体库和CSS框架-->
     <link rel="stylesheet" href="https://static01.tengwen.com/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com/backend/vip/css/css.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com//backend/vip/css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/media.css">
     <!--<script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/cookies.min.js"></script>-->
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/jquery.qrcode.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/clipboard.min.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/klorofil-common.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/comm.js"></script>
+    <script type="text/javascript" src="./js/klorofil-common.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/moment.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/moment_zh-cn.js"></script>
     <link rel="stylesheet" href="https://static01.tengwen.com/common/bootstrap-datetimepicker-4.17.min.css">
@@ -33,24 +33,26 @@
 
 </head>
 
+
 <body>
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#3c8dbc">
-            <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src="https://static01.tengwen.com/backend/vip/img/logo-dark.png"
-                        alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div>
+        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#2a3747">
+            <!-- <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src=""
+                            alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div> -->
             <div class="container-fluid">
+
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-list" aria-hidden="true" style="color: #fff;"></i>
+                    <button type="button" class="btn-toggle-fullwidth"><img src="./images/sidebar@2x.png" alt=""></i>
                     </button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <!--           <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="https://static01.tengwen.com/backend/vip/img/user.png"
-                                    class="img-circle" alt="Avatar">
-                                <span>哇嘎互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <!-- <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./images/headshot@2x.png"
+                                    alt="">
+                                <span style="color:#f1f1f1;">哇嘎互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/admin/index"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
                                 </li>
@@ -61,19 +63,23 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav> <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
         <div id="sidebar-nav" class="sidebar">
-            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;">
+            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;background-color:#354051;">
                 <nav>
                     <ul class="nav">
-                        <li><a href="./qudaoliebiao.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span
-                            class="menu-span">渠道列表</span></a></li>
-                <li><a href="./tuiguangshouru.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">推广收入</span></a></li>
-                <li><a href="./tixianmingxi.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">提现明细</span></a></li>
-                <li><a href="./hebingzhifu.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">合并支付</span></a></li>
-                <li><a href="./fenliulianjie.html" class="active"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">分流链接</span></a></li>
+                        <li><a href="./channel_q.html"><img src="./images/list@2x.png" alt="" class="png_wj"></i><span
+                                    class="menu-span">渠道列表</span></a></li>
+                        <li><a href="./generalize_t.html"><img src="./images/promotion@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">推广收入</span></a></li>
+                        <li><a href="./withdraw_tx.html"><img src="./images/withdrawal@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">提现明细</span></a></li>
+                        <li><a href="./merge_h.html"><img src="./images/merge@2x.png" alt="" class="png_wj"><span class="menu-span">合并支付</span></a></li>
+                        <li><a href="./shunt_f.html" class="active"><img src="./images/shunt@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">分流链接</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -93,7 +99,7 @@
 
                         <div class="panel-body">
                             <div class="btn-group form-group">
-                                <a class="btn btn-info" href="/ujump/uadd">新增</a>
+                                <a class="btn" style="background-color:#8957a1;color: #f1f1f1;" href="./newly increased.html">新增</a>
                             </div>
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
@@ -107,26 +113,58 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>10</td>
-                                        <td>xx</td>
+                                        <td>1206</td>
+                                        <td>古风小说</td>
                                         <td>https://api.ggwxs.com/link.php?id=10</td>
-                                        <td>2018-10-18 17:59:14</td>
+                                        <td>2018-09-18 09:59:14</td>
                                         <td class="text-center">
-                                            <a class="btn btn-info" href="/ujump/ushow?id=10">修改</a>
-                                            <a class="btn btn-info" href="/ujump/show?jump_id=10">分流配置</a>
+                                            <a class="btn" style="background-color:#52627d;color:#f1f1f1;" href="./modification.html">修改</a>
+                                            <a class="btn btn-primary" href="./Bypass configuration.html">分流配置</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1260</td>
+                                        <td>古风小说</td>
+                                        <td>https://api.ggwxs.com/link.php?id=10</td>
+                                        <td>2018-10-18 13:59:14</td>
+                                        <td class="text-center">
+                                            <a class="btn"style="background-color:#52627d; color:#f1f1f1;" href="./modification.html">修改</a>
+                                            <a class="btn btn-primary" href="./Bypass configuration.html">分流配置</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1960</td>
+                                        <td>古风小说</td>
+                                        <td>https://api.ggwxs.com/link.php?id=10</td>
+                                        <td>2018-11-18 15:59:14</td>
+                                        <td class="text-center">
+                                            <a class="btn"style="background-color:#52627d;color:#f1f1f1;" href="./modification.html">修改</a>
+                                            <a class="btn btn-primary" href="./Bypass configuration.html">分流配置</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1960</td>
+                                        <td>古风小说</td>
+                                        <td>https://api.ggwxs.com/link.php?id=10</td>
+                                        <td>2018-11-18 15:59:14</td>
+                                        <td class="text-center">
+                                            <a class="btn"style="background-color:#52627d;color:#f1f1f1;" href="./modification.html">修改</a>
+                                            <a class="btn btn-primary" href="./Bypass configuration.html">分流配置</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1960</td>
+                                        <td>古风小说</td>
+                                        <td>https://api.ggwxs.com/link.php?id=10</td>
+                                        <td>2018-11-18 15:59:14</td>
+                                        <td class="text-center">
+                                            <a class="btn"style="background-color:#52627d;color: #f1f1f1;" href="./modification.html">修改</a>
+                                            <a class="btn btn-primary" href="./Bypass configuration.html">分流配置</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div data-pagination="pagination_new" data-pagenumber="1" data-paginationurl="/ujump/index?page=customize_page_num"
-                                data-totalnumber="1" data-paginationmax="1" style="float: right;">
-                                <ul class="pagination">
-                                    <li value="pre" style="display: inline-block;"><a href="/ujump/index?page=1">首页</a></li>
-                                    <li value="1" class="active" style="display: none;"><a href="/ujump/index?page=1">1</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="javascript:void(0);">»</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="/ujump/index?page=1">尾页</a></li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -186,10 +224,8 @@
             $('.datetimepicker').datetimepicker(datetimepickerSetting)
         })
     </script>
-    <script src="https://static01.tengwen.com/common/paginate.js"></script>
 
 
 </body>
-
 
 </html>

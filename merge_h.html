@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>某用户平台</title>
+    <title>LOGO</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
@@ -17,14 +17,14 @@
     <!-- Bootstrap 3.3.7 -->
     <!-- Font Awesome 图标字体库和CSS框架-->
     <link rel="stylesheet" href="https://static01.tengwen.com/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com/backend/vip/css/css.css">
-    <link rel="stylesheet" href="https://static01.tengwen.com//backend/vip/css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/media.css">
     <!--<script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/cookies.min.js"></script>-->
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/jquery.qrcode.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/clipboard.min.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/klorofil-common.js"></script>
-    <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/comm.js"></script>
+    <script type="text/javascript" src="./js/klorofil-common.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/common/moment.min.js"></script>
     <script type="text/javascript" src="https://static01.tengwen.com/backend/vip/js/moment_zh-cn.js"></script>
     <link rel="stylesheet" href="https://static01.tengwen.com/common/bootstrap-datetimepicker-4.17.min.css">
@@ -33,24 +33,26 @@
 
 </head>
 
+
 <body>
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#3c8dbc">
-            <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src="https://static01.tengwen.com/backend/vip/img/logo-dark.png"
-                        alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div>
+        <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color:#2a3747">
+            <!-- <div class="brand" style="padding:0;background:#3c8dbc"><a href="javascript:void(0);"><img src=""
+                            alt="Klorofil Logo" class="img-responsive logo" style="height:50px;"></a></div> -->
             <div class="container-fluid">
+
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-list" aria-hidden="true" style="color: #fff;"></i>
+                    <button type="button" class="btn-toggle-fullwidth"><img src="./images/sidebar@2x.png" alt=""></i>
                     </button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <!--           <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="https://static01.tengwen.com/backend/vip/img/user.png"
-                                    class="img-circle" alt="Avatar">
-                                <span>某某互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <!-- <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./images/headshot@2x.png"
+                                    alt="">
+                                <span style="color:#f1f1f1;">哇嘎互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/admin/index"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
                                 </li>
@@ -61,19 +63,22 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav> <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
         <div id="sidebar-nav" class="sidebar">
-            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;">
+            <div class="sidebar-scroll" style="overflow-y: auto;height: 100%;padding:20px 0;background-color:#354051;">
                 <nav>
                     <ul class="nav">
-                        <li><a href="./qudaoliebiao.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span
-                            class="menu-span">渠道列表</span></a></li>
-                <li><a href="./tuiguangshouru.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">推广收入</span></a></li>
-                <li><a href="./tixianmingxi.html" ><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">提现明细</span></a></li>
-                <li><a href="./hebingzhifu.html" class="active"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">合并支付</span></a></li>
-                <li><a href="./fenliulianjie.html"><i class="fa fa-circle-o" aria-hidden="true"></i><span class="menu-span">分流链接</span></a></li>
+                        <li><a href="./channel_q.html" ><img src="./images/list@2x.png" alt="" class="png_wj"></i><span
+                                    class="menu-span">渠道列表</span></a></li>
+                        <li><a href="./generalize_t.html"><img src="./images/promotion@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">推广收入</span></a></li>
+                        <li><a href="./withdraw_tx.html"><img src="./images/withdrawal@2x.png" alt="" class="png_wj"><span
+                                    class="menu-span">提现明细</span></a></li>
+                        <li><a href="./merge_h.html" class="active"><img src="./images/merge@2x.png" alt="" class="png_wj"><span class="menu-span">合并支付</span></a></li>
+                        <li><a href="./shunt_f.html"><img src="./images/shunt@2x.png" alt="" class="png_wj"><span class="menu-span">分流链接</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -112,7 +117,7 @@
                                         placeholder="结束日期">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn " style="background-color:#3c8dbc;color:#fff;"> 查询</button>
+                                    <button type="submit" class="btn " style="background-color:#52627d;color:#fff;"> 查询</button>
                                 </div>
                             </form>
                             <table class="table table-striped table-hover table-bordered">
@@ -129,69 +134,60 @@
                                 <tbody>
                                     <tr>
                                         <td>232</td>
-                                        <td>2018-10-31 11:35:54 <a href="#">【明细】</a>
+                                        <td>2018-10-31 11:35:54 <a href="/pay/withdraw?mergeid=232">【明细】</a>
                                         </td>
                                         <td>2018-10-20 ~ 2018-10-29</td>
                                         <td>171</td>
-                                        <td>¥ 8638</td>
-                                        <td>¥ 7774.2</td>
+                                        <td class="text-danger">¥ 8638</td>
+                                        <td class="text-danger">¥ 7774.2</td>
                                     </tr>
                                     <tr>
                                         <td>212</td>
-                                        <td>2018-10-22 11:08:01 <a href="#">【明细】</a>
+                                        <td>2018-10-22 11:08:01 <a href="/pay/withdraw?mergeid=212">【明细】</a>
                                         </td>
                                         <td>2018-10-13 ~ 2018-10-19</td>
                                         <td>543</td>
-                                        <td>¥ 27613</td>
-                                        <td>¥ 24851.7</td>
+                                        <td class="text-danger">¥ 27613</td>
+                                        <td class="text-danger">¥ 24851.7</td>
                                     </tr>
                                     <tr>
                                         <td>196</td>
-                                        <td>2018-10-15 11:33:21 <a href="#">【明细】</a>
+                                        <td>2018-10-15 11:33:21 <a href="/pay/withdraw?mergeid=196">【明细】</a>
                                         </td>
                                         <td>2018-10-11 ~ 2018-10-12</td>
                                         <td>157</td>
-                                        <td>¥ 7767</td>
-                                        <td>¥ 6990.3</td>
+                                        <td class="text-danger">¥ 7767</td>
+                                        <td class="text-danger">¥ 6990.3</td>
                                     </tr>
                                     <tr>
                                         <td>193</td>
-                                        <td>2018-10-12 13:36:31 <a href="#">【明细】</a>
+                                        <td>2018-10-12 13:36:31 <a href="/pay/withdraw?mergeid=193">【明细】</a>
                                         </td>
                                         <td>2018-09-28 ~ 2018-10-10</td>
                                         <td>1892</td>
-                                        <td>¥ 84580.9</td>
-                                        <td>¥ 76122.81</td>
+                                        <td class="text-danger">¥ 84580.9</td>
+                                        <td class="text-danger">¥ 76122.81</td>
                                     </tr>
                                     <tr>
                                         <td>174</td>
-                                        <td>2018-09-29 10:10:24 <a href="#">【明细】</a>
+                                        <td>2018-09-29 10:10:24 <a href="/pay/withdraw?mergeid=174">【明细】</a>
                                         </td>
                                         <td>2018-09-26 ~ 2018-09-27</td>
                                         <td>366</td>
-                                        <td>¥ 17206</td>
-                                        <td>¥ 15485.4</td>
+                                        <td class="text-danger">¥ 17206</td>
+                                        <td class="text-danger">¥ 15485.4</td>
                                     </tr>
                                     <tr>
                                         <td>168</td>
-                                        <td>2018-09-27 12:06:03 <a href="#">【明细】</a>
+                                        <td>2018-09-27 12:06:03 <a href="/pay/withdraw?mergeid=168">【明细】</a>
                                         </td>
                                         <td>2018-09-14 ~ 2018-09-25</td>
                                         <td>1317</td>
-                                        <td>¥ 59612</td>
-                                        <td>¥ 53650.8</td>
+                                        <td class="text-danger">¥ 59612</td>
+                                        <td class="text-danger">¥ 53650.8</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div data-pagination="pagination_new" data-pagenumber="1" data-paginationurl="/pay/merge?page=customize_page_num"
-                                data-totalnumber="1" data-paginationmax="1" style="float: right;">
-                                <ul class="pagination">
-                                    <li value="pre" style="display: inline-block;"><a href="/pay/merge?page=1">首页</a></li>
-                                    <li value="1" class="active" style="display: none;"><a href="/pay/merge?page=1">1</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="javascript:void(0);">»</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="/pay/merge?page=1">尾页</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,10 +247,9 @@
             $('.datetimepicker').datetimepicker(datetimepickerSetting)
         })
     </script>
-    <script src="https://static01.tengwen.com/common/paginate.js"></script>
+
 
 
 </body>
-
 
 </html>
