@@ -76,12 +76,12 @@
                                         class="menu-span">数据概况</span></a></li>
                             <li><a href="./ordersummary.html"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="menu-span">订单汇总</span></a></li>
                             <li><a href="./Usersummary.html"><i class="fa fa-pie-chart" aria-hidden="true"></i><span class="menu-span">用户汇总</span></a></li>
-                            <li><a href="./addsup_xs.html" class="active"><i class="fa fa-bars" aria-hidden="true"></i><span class="menu-span">小说充值汇总</span></a></li>
+                            <li><a href="./addsup_xs.html"><i class="fa fa-bars" aria-hidden="true"></i><span class="menu-span">小说充值汇总</span></a></li>
                             <li><a href="./orderdetails_dd.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span
                                         class="menu-span">订单明细</span></a></li>
                             <li><a href="./subsidiary_fs.html"><i class="fa fa-id-card-o" aria-hidden="true"></i><span
                                         class="menu-span">粉丝明细</span></a></li>
-                            <li><a href="./library-xs.html" ><i class="fa fa-book" aria-hidden="true"></i><span
+                            <li><a href="./library-xs.html"><i class="fa fa-book" aria-hidden="true"></i><span
                                         class="menu-span">小说库</span></a></li>
                             <li><a href="./Promotion-tg.html"><i class="fa fa-chain-broken" aria-hidden="true"></i><span
                                         class="menu-span">推广列表</span></a></li>
@@ -89,7 +89,7 @@
                                         class="menu-span">内推列表</span></a></li>
                             <li><a href="./Listofactivities-hd.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span
                                         class="menu-span">活动列表</span></a></li>
-                            <li><a href="./antistop-gj.html"><i class="fa fa-comments-o" aria-hidden="true"></i><span class="menu-span">关键词回复</span></a></li>
+                            <li><a href="./antistop-gj.html" class="active"><i class="fa fa-comments-o" aria-hidden="true"></i><span class="menu-span">关键词回复</span></a></li>
                             <li><a href="/channel/linkRecycling"><i class="fa fa-recycle" aria-hidden="true"></i><span
                                         class="menu-span">链接回收</span></a></li>
                             <li><a href="/pushmsg/index"><i class="fa fa-reply-all" aria-hidden="true"></i><span class="menu-span">智能推送</span></a></li>
@@ -108,155 +108,50 @@
             <div class="main-content">
                 <div class="container-fluid">
 
-                    <style type="text/css">
-                        @media screen and (max-width: 768px) {
-                            strong {
-                                padding-top: 10px;
-                                display: inline-block;
-                            }
+                    <style>
+                        .user-img{    width: 24px;
+        height: 24px;
+        border-radius: 100px;
+        margin-right: 5px;}
+    </style>
 
-                            .pc {
-                                display: none;
-                            }
-                        }
 
-                        b {
-                            font-weight: normal;
-                        }
 
-                        .well {
-                            background-color: #fff;
-                        }
-
-                        .text-other {
-                            margin: 0px;
-                            font-size: 12px;
-                            color: #777;
-                        }
-                    </style>
-
-                    <!-- TITLE -->
-                    <div class="panel" style="display:none;">
-                        <div class="panel-heading mynav">
-                            <h3 class="panel-title">
-                                <i class="fa fa-home" aria-hidden="true">
-                                </i>首页 &gt;
-                                <h7 class="menu-name">小说充值汇总</h7>
-                            </h3>
-                        </div>
-                    </div>
-                    <!-- TITLE END-->
-
-                    <!-- TABLE -->
                     <div class="panel">
                         <div class="panel-heading mynav">
-                            <h3 class="panel-title"><i class="fa fa-home" aria-hidden="true"></i>首页 &gt; 小说充值汇总
+                            <h3 class="panel-title">
+                                <i class="fa fa-home" aria-hidden="true"></i>首页 &gt; <h7 class="menu-name">关键词回复</h7>
                             </h3>
                         </div>
+
                         <div class="panel-body">
-                            <form class="navbar-form navbar-left" role="search" action="" method="get">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="请输入书名" name="orderno" value="">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control datetimepicker" id="form-start_date"
-                                        placeholder="开始日期" name="stime" value="">
-                                    <input type="text" class="form-control datetimepicker" id="form-end_date"
-                                        placeholder="结束日期" name="etime" value="">
-                                </div>
-                                <button type="submit" class="btn" style="background-color:#52627d;color:#fff;">查询</button>
+                            <!--TITLE-->
+                            <div class="btn-group" style="padding-bottom: 20px;">
+                                <a class="btn " style="background-color:#3b86e0;color:#fff;border-color:#3b86e0;" href="javascript:submitInDispatch(2,1,0,0,0,'/keyreplys/pop_ups');">
+                                    <i class="fa fa-plus"></i> 创建关键词
+                                </a>
+                            </div>
+                            <!--TITLE END-->
 
-                                <div class="form-group"> <button type="button" class="btn " style="background-color:#7a8dab;color:#fff;"
-                                        onclick="exportdata()">导出Excel数据</button> </div>
-
-                            </form>
+                            <!--TABLE -->
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                     <tr>
-                                        <th width="25%">书名</th>
-                                        <th width="25%">
-                                            <a href="/book/summary?type=today&amp;sort=asc">今日充值</a>
-                                            <!-- <i class="fa fa-sort-amount-desc"></i> -->
-                                        </th>
-                                        <th width="25%">
-                                            <a href="/book/summary?type=yesterday&amp;sort=asc">昨日充值</a>
-                                        </th>
-                                        <th width="25%">
-                                            <a href="/book/summary?type=total&amp;sort=asc">总充值</a>
-                                        </th>
+                                        <th>关键词</th>
+                                        <th>入口</th>
+                                        <th>点击量</th>
+                                        <th>充值金额</th>
+                                        <th>有效订单数</th>
+                                        <th>操作</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <span>
-                                                <a href="/book/body?bid=386">鬼探</a>
-                                            </span>
-                                        </td>
-                                        <td>¥180.00<br>4单</td>
-                                        <td>¥280.00<br>5单</td>
-                                        <td>¥140,817.00<br>3056单</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>
-                                                <a href="/book/body?bid=402">男神老公别乱来</a>
-                                            </span>
-                                        </td>
-                                        <td>¥50.00<br>1单</td>
-                                        <td>¥0.00<br>0单</td>
-                                        <td>¥50.00<br>1单</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>
-                                                <a href="/book/body?bid=199">阴缘鬼妻</a>
-                                            </span>
-                                        </td>
-                                        <td>¥50.00<br>1单</td>
-                                        <td>¥100.00<br>1单</td>
-                                        <td>¥2,219.00<br>46单</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>
-                                                <a href="/book/body?bid=75">狂龙</a>
-                                            </span>
-                                        </td>
-                                        <td>¥0.00<br>0单</td>
-                                        <td>¥0.00<br>0单</td>
-                                        <td>¥180.00<br>4单</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>
-                                                <a href="/book/body?bid=426">行尸走肉</a>
-                                            </span>
-                                        </td>
-                                        <td>¥0.00<br>0单</td>
-                                        <td>¥0.00<br>0单</td>
-                                        <td>¥50.00<br>1单</td>
-                                    </tr>
-
                                 </tbody>
                             </table>
-                            <div data-pagination="pagination_new" data-pagenumber="1" data-paginationurl="/book/summary?page=customize_page_num"
-                                data-totalnumber="4" data-paginationmax="4" style="float: right;">
-                                <ul class="pagination">
-                                    <li value="pre" style="display: inline-block;"><a href="/book/summary?page=1">首页</a></li>
-                                    <li value="1" class="active" style="display: inline-block;"><a href="/book/summary?page=1">1</a></li>
-                                    <li value="2" style="display: inline-block;"><a href="/book/summary?page=2">2</a></li>
-                                    <li value="3" style="display: inline-block;"><a href="/book/summary?page=3">3</a></li>
-                                    <li value="4" style="display: inline-block;"><a href="/book/summary?page=4">4</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="javascript:void(0);">»</a></li>
-                                    <li value="next" style="display: inline-block;"><a href="/book/summary?page=4">尾页</a></li>
-                                </ul>
-                            </div>
+                            <!--TABLE END -->
                         </div>
+
                     </div>
-                    <!-- TABLE END -->
-
-
                 </div>
             </div>
         </div>
@@ -335,46 +230,158 @@
 
         });
     </script>
+    <script src="https://static01.tengwen.com/common/paginate.js"></script>
+    <script type="text/javascript" src="https://static01.tengwen.com/common/select2.full.min.js"></script>
+    <link rel="stylesheet" href="https://static01.tengwen.com/common/select2.min.css">
     <script>
-        $('.datetimepicker').datetimepicker({
-            format: 'YYYY-MM-DD',
-            locale: moment.locale('zh-CN'),
-        });
+        function chart_exportdata(cid) {
+            var sdate = $("input#start_date").val();
+            var edate = $("input#end_date").val();
+            sendData('/channel/line_chart?sdate=' + sdate + '&edate=' + edate, {
+                is_ajax: '1',
+                'cid': cid
+            }, function (data) {
+                if (data.data) {
+                    showchartdata(data.data);
+                }
+            });
+        }
 
-        function exportdata() {
-            var key = $("#form-key").val();
-            var status = $("#form-status").val();
-            var start_date = $("#form-start_date").val();
-            var end_date = $("#form-end_date").val();
-            var did = $("#form-did").val();
-            var idid = $("#form-idid").val();
+        function first_day(cid) {
+            sendData('/channel/line_chart?daynum=1', {
+                is_ajax: '1',
+                'cid': cid
+            }, function (data) {
+                if (data.data) {
+                    showchartdata(data.data);
+                }
+            });
+        }
 
-            if (!start_date || !end_date) {
-                toastr.warning('请选择有效日期范围');
-                return;
+        function second_day(cid) {
+            sendData('/channel/line_chart?daynum=3', {
+                is_ajax: '1',
+                'cid': cid
+            }, function (data) {
+                if (data.data) {
+                    showchartdata(data.data);
+                }
+            });
+        }
+
+        function three_day(cid) {
+            sendData('/channel/line_chart?daynum=7', {
+                is_ajax: '1',
+                'cid': cid
+            }, function (data) {
+                if (data.data) {
+                    showchartdata(data.data);
+                }
+            });
+        }
+
+        function line_chart(cid) {
+            Ewin.alert({
+                message: '<div class="row">' +
+                    '<div class="col-md-12 divwidth" >' +
+                    '<div class="panel-body form-horizontal"  id="curr_month">' +
+                    '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="first"  onclick="first_day(' +
+                    cid + ')">一天</button>&nbsp;' +
+                    '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="second" onclick="second_day(' +
+                    cid + ')">三天</button>&nbsp;' +
+                    '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="three"  onclick="three_day(' +
+                    cid + ')">七天</button>' +
+                    '<div class="form-group" style="  float: right;margin-right:20px; "><button type="button" class="btn" style="background-color:#3b86e0; color:#fff;" onclick="chart_exportdata(' +
+                    cid + ')">查询</button></div>' +
+                    '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="end_date" name="end_date" placeholder="结束日期"  value=""></div>' +
+                    '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="start_date" name="start_date" placeholder="开始日期"  value=""></div>' +
+                    '</div>' +
+                    '<div id="order_line_chart" ></div>' +
+                    '</div>' +
+                    '</div>',
+                title: '引导数统计表',
+                btnok: '关闭'
+            });
+
+            $('input.datetimepicker').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('zh-CN'),
+            });
+
+            $('.modal-sm').attr('style', 'width:90%;');
+
+            var widths = $(window).width() * 0.9;
+
+            $('#order_line_chart').attr('style', 'width:' + widths + 'px;height:300px;');
+
+            sendData('/channel/line_chart', {
+                is_ajax: '1',
+                'cid': cid
+            }, function (data) {
+                if (data) {
+                    showchartdata(data.data);
+                }
+
+            });
+        }
+
+        function showchartdata(msg) {
+
+            var myChart = echarts.init(document.getElementById('order_line_chart'));
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+
+                color: ['#3b86e0', '#ffc425', ],
+                legend: {
+                    data: [{
+                        name: '引导数',
+                        icon: 'image://https://static01.tengwen.com/backend/novel/img/tag-blue.png'
+                    }, {
+                        name: '新增用户',
+                        icon: 'image://https://static01.tengwen.com/backend/novel/img/tag-yellow.png'
+                    }, ],
+                    itemWidth: 36,
+                    itemHeight: 36,
+                    itemGap: 50,
+                },
+
+                grid: {
+                    left: '3%',
+                    right: '6%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: msg.time
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                        name: '引导数',
+                        type: 'line',
+                        data: msg.clk
+                    },
+                    {
+                        name: '新增用户',
+                        type: 'line',
+                        data: msg.users
+                    }
+                ]
+
+            };
+            myChart.setOption(option);
+            myChart.showLoading();
+            if (msg) {
+                myChart.hideLoading();
             }
-            var start_Time = (new Date(start_date)).getTime() / 1000; //得到秒数
-            var end_Time = (new Date(end_date)).getTime() / 1000; //得到秒数
-            if (end_Time < start_Time) {
-                toastr.warning('请选择有效日期范围');
-                return;
-            }
-            if ((end_Time - start_Time) / 86400 > 31) {
-                toastr.warning('只可选择范围31天的数据');
-                return;
-            }
-
-            var statu = "";
-
-            if (statu) {
-                window.location = "/order/order_excel?key=&statu=&did=&stime=" + start_Time + "&etime=" + end_Time;
-            } else {
-                window.location = "/order/order_excel?key=&did=&stime=" + start_Time + "&etime=" + end_Time;
-            }
-
         }
     </script>
-    <!-- <script src="https://static01.tengwen.com/common/paginate.js"></script> -->
 
 </body>
 
