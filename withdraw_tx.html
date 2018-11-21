@@ -47,21 +47,30 @@
                     </button>
                 </div>
                 <div id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- <li class="dropdown"> <a href="/user_notice.php" class="dropdown-toggle icon-menu"> <i class="fa fa-bell-o" aria-hidden="true" ></i> <span class="badge bg-danger notice_msgnum"></span> </a> </li> -->
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./images/headshot@2x.png"
-                                    alt="">
-                                <span style="color:#f1f1f1;">哇嘎互娱</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/admin/index"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
-                                </li>
-                                <li><a href="/auth/logout" onclick="return confirm('确认退出？')"><i class="fa fa-fw fa-power-off"
-                                            aria-hidden="true"></i> <span>安全退出</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="/notice/index" class="dropdown-toggle icon-menu"> 
+                                    <span class="badge bg-danger notice_msgnum"></span>
+                                </a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./images/headshot@2x.png"
+                                        class="img-circle">
+                                    <span style="color:#f1f1f1;">核桃书吧</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./personaldata.gr.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
+                                    </li>
+                                    <li><a href="Publicnumbersetting-gz.html"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>公众号设置/接入</span></a>
+                                    </li>
+                                    <li><a href="https://static01.tengwen.com/backend/novel/docx/tengwen_readme.docx"><i
+                                                class="fa fa-arrow-down" aria-hidden="true"></i><span>下载帮助文档</span></a>
+                                    </li>
+                                    <li><a href="/auth/logout" onclick="return confirm('确认退出？')"><i class="fa fa-fw fa-power-off"
+                                                aria-hidden="true"></i> <span>安全退出</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
             </div>
         </nav> <!-- END NAVBAR -->
