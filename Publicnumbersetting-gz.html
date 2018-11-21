@@ -51,7 +51,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="/user/modify_pwd"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>个人资料</span></a>
                                 </li>
-                                <li><a href="/setting/index"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>公众号设置/接入</span></a>
+                                <li><a href="/setting/index"><i class="fa fa-address-card-o" aria-hidden="true" style="color:#5a82c1;"></i><span>公众号设置/接入</span></a>
                                 </li>
                                 <li><a href="https://static01.tengwen.com/backend/novel/docx/tengwen_readme.docx"><i
                                             class="fa fa-arrow-down" aria-hidden="true"></i><span>下载帮助文档</span></a>
@@ -135,7 +135,7 @@
                                     <a href="#home" aria-controls="home" role="tab" data-toggle="tab">公众号设置</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">公众号接入信息</a>
+                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" >公众号接入信息</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -187,7 +187,7 @@
                                                     39.108.94.230
                                                 </span>
                                                 <div style="margin-top:10px;">
-                                                    <a href="javascript:;" data-toggle="copy" data-clipboard-target="#ip-white-list">
+                                                    <a href="javascript:;" data-toggle="copy" data-clipboard-target="#ip-white-list" style="color:#a27bb4;">
                                                         <i class="fa fa-copy"></i>点击复制IP
                                                     </a>
                                                 </div>
@@ -197,16 +197,16 @@
                                             <label for="inputEmail3" class="col-sm-3 control-label">关注二维码</label>
                                             <div class="col-sm-8">
 
-                                                <div class="input-group" style="padding-bottom: 1%; border:none;">
+                                                <div class="input-group" style="padding-bottom: 1%; border:none;" >
                                                     <img src="https://static.tengwen.com/updata/seru/20041/1809/20180907111837k7ux.jpg"
                                                         alt="" style="max-width:300px;" id="qrCodespic">
                                                 </div>
-                                                <div class="input-group">
+                                                <div class="input-group" style="margin-top:2%;">
                                                     <input type="text" class="form-control" name="qrcodepic" id="qrcodepic"
                                                         placeholder="" value="updata/seru/20041/1809/20180907111837k7ux.jpg"
                                                         readonly="">
                                                     <span class="input-group-btn">
-                                                        <button type="button" id="img-submit" class="btn " style="z-index: 2;background-color:#3b86e0;color:#fff;">上传图片</button>
+                                                        <button type="button" id="img-submit" class="btn " style="z-index: 2;background-color:#8957a1;color:#fff;">上传图片</button>
                                                         <div id="html5_1cmf12cbss2lds51hcs1mfc181d4_container" class="moxie-shim moxie-shim-html5"
                                                             style="position: absolute; top: 0px; left: -1px; width: 102px; height: 34px; overflow: hidden; z-index: 1;">
                                                             <input id="html5_1cmf12cbss2lds51hcs1mfc181d4" type="file"
@@ -223,12 +223,27 @@
                                                 <span class="inputtip">上传的图片地址，保存生效</span>
                                             </div>
                                         </div>
-
-
+                                        <strong class="col-sm-10" style="padding-top: 10px;">客服信息设置</strong>
                                         <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">微信客服</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="mp_original_id" name="mp_original_id"
+                                                        placeholder="" value="">
+                                                </div>
+                                            </div>
+                                            <span class="inputtip" style="padding-left:26%;">可填微信号或上传微信二维码图片,如为空,则由平台客服受理粉丝问题</span>
+                                            <div class="form-group" style="margin-top:10px;">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">微信客服</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="mp_wxno" name="mp_wxno"
+                                                        placeholder="" value="">
+                                                </div>
+                                            </div>
+                                            <span class="inputtip" style="padding-left:26%;">将显示在首页底部,不填而不显示</span>
+                                        <div class="form-group" >
                                             <label for="inputPassword3" class="col-sm-3 control-label"></label>
-                                            <div class="col-sm-8">
-                                                <button type="button" id="wx-submit" class="btn " style="width:100px;background-color:#3b86e0;color:#fff;">保存
+                                            <div class="col-sm-8" style="margin-top:20px;">
+                                                <button type="button" id="wx-submit" class="btn " style="width:100px;background-color:#52627d;color:#fff;">保存
                                                 </button>
                                                 <span class="green tipmsg">&nbsp;</span>
                                             </div>
