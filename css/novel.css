@@ -262,6 +262,7 @@ html.fullscreen-bg #wrapper {
     background-color: #fff;
 }
 
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color:#333333;
     background-color: #fafafa;
@@ -373,6 +374,7 @@ html.fullscreen-bg #wrapper {
     right: 8px;
 }
 
+
 .navbar-nav > li > a {
     height: 50px;
 }
@@ -381,8 +383,8 @@ html.fullscreen-bg #wrapper {
     font-size: 22px;
     margin-right: 2px;
     vertical-align: middle;
+   
 }
-
 .navbar-nav > li > a > i.icon-submenu {
     margin-left: 2px;
     margin-right: 0;
@@ -528,11 +530,12 @@ ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
 }
 
 .dropdown-menu > li > a {
-    color: #676a6d;
+    color: #04959e;
 }
 
 .dropdown-menu > li i {
     margin-right: 6px;
+    color: #04959e;
 }
 
 .dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
@@ -901,7 +904,13 @@ fieldset[disabled] .btn {
     padding-top: 10px;
     padding-bottom: 15px;
 }
-
+.panel-body .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #f1f1f1;
+    cursor: default;
+    background-color: #3869b6;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
 .panel .panel-note {
     font-size: 13px;
     line-height: 2.6;
@@ -1019,8 +1028,6 @@ label {
     color: #E01305;
 }
 
-.article_view .table-striped {
-}
 
 .article_view .table-striped i {
     margin: 0 3px 0 5px;

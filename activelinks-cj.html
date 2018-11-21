@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://static01.tengwen.com/common/toastr.min.css">
 </head>
 
-<body>
+<body class="modal-open">
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;background-color: #2a3747;">
             <div class="brand" style="padding:0;background-color: #2a3747;"><a href="javascript:void(0);"></div>
@@ -89,20 +89,15 @@
                         <li><a href="./Listofactivities-hd.html" class="active"><i class="fa fa-shopping-cart"
                                     aria-hidden="true"></i><span class="menu-span">活动列表</span></a></li>
                         <li><a href="./antistop-gj.html"><i class="fa fa-comments-o" aria-hidden="true"></i><span class="menu-span">关键词回复</span></a></li>
-                        <li><a href="./Linkstorecycle-lj.html"><i class="fa fa-recycle" aria-hidden="true"></i><span
+                        <li><a href="/channel/linkRecycling"><i class="fa fa-recycle" aria-hidden="true"></i><span
                                     class="menu-span">链接回收</span></a></li>
-                        <li><a href="./Intelligentpush-zn.html"><i class="fa fa-reply-all" aria-hidden="true"></i><span
-                                    class="menu-span">智能推送</span></a></li>
-                        <li><a href="./Templatemessage-mb.html"><i class="fa fa-envelope-open" aria-hidden="true"></i><span
-                                    class="menu-span">模版消息</span></a></li>
-                        <li><a href="newsoftheservice-kf.html"><i class="fa fa-commenting-o" aria-hidden="true"></i><span
-                                    class="menu-span">客服消息</span></a></li>
-                        <li><a href="./promoteincome-sr.html"><i class="fa fa-jpy" aria-hidden="true"></i><span class="menu-span">推广收入</span></a></li>
-                        <li><a href="./withdrawalofsubsidiary-tx.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span
-                                    class="menu-span">提现明细</span></a></li>
-                        <li><a href="./Publicnumbersetting-gz.html"><i class="fa fa-cog" aria-hidden="true"></i><span
-                                    class="menu-span">公众号设置</span></a></li>
-                        <li><a href="./OtherSettings-qt.html"><i class="fa fa-cogs" aria-hidden="true"></i><span class="menu-span">其它设置</span></a></li>
+                        <li><a href="/pushmsg/index"><i class="fa fa-reply-all" aria-hidden="true"></i><span class="menu-span">智能推送</span></a></li>
+                        <li><a href="/msg/template"><i class="fa fa-envelope-open" aria-hidden="true"></i><span class="menu-span">模版消息</span></a></li>
+                        <li><a href="/msg/customMsg"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="menu-span">客服消息</span></a></li>
+                        <li><a href="/income/index"><i class="fa fa-jpy" aria-hidden="true"></i><span class="menu-span">推广收入</span></a></li>
+                        <li><a href="/withdrawal/index"><i class="fa fa-list-alt" aria-hidden="true"></i><span class="menu-span">提现明细</span></a></li>
+                        <li><a href="/setting/index"><i class="fa fa-cog" aria-hidden="true"></i><span class="menu-span">公众号设置</span></a></li>
+                        <li><a href="/setting/more"><i class="fa fa-cogs" aria-hidden="true"></i><span class="menu-span">其它设置</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -183,7 +178,7 @@
                                                 </button>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li>
-                                                        <a href="./Modifytheproperties-xg.html">
+                                                        <a href="javascript:submitActivityDispatch(1,1,5526,'/channel/pop_ups_activity');">
                                                             <i class="fa fa-edit"></i> 修改
                                                         </a>
                                                     </li>
@@ -234,7 +229,7 @@
                                                 </button>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li>
-                                                        <a href="./Modifytheproperties-xg.html">
+                                                        <a href="javascript:submitActivityDispatch(1,1,4795,'/channel/pop_ups_activity');">
                                                             <i class="fa fa-edit"></i> 修改
                                                         </a>
                                                     </li>
@@ -285,7 +280,7 @@
                                                 </button>
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li>
-                                                        <a href="./Modifytheproperties-xg.html">
+                                                        <a href="javascript:submitActivityDispatch(1,1,3169,'/channel/pop_ups_activity');">
                                                             <i class="fa fa-edit"></i> 修改
                                                         </a>
                                                     </li>
@@ -392,23 +387,21 @@
         <script type="text/javascript" src="https://static01.tengwen.com/common/select2.full.min.js"></script>
         <link rel="stylesheet" href="https://static01.tengwen.com/common/select2.min.css">
         <script>
-            function delout(id) {
 
+            function delout( id ) {
+    
                 var confirm = Ewin.confirm({
                     title: '删除提示',
                     message: "您确定要删除推广方案:<BR>" + $("#title_" + id).text()
                 });
                 confirm.on(function (e) {
                     if (e) {
-                        sendData('/channel/del_activity', {
-                            is_ajax: 1,
-                            del: id
-                        }, function (data) {
-
+                        sendData('/channel/del_activity', {is_ajax: 1, del: id}, function (data) {
+    
                             if (data.code == 1) {
                                 toastr.success(data.msg);
-
-                                setTimeout('window.location="/channel/activity"', 1000);
+    
+                                setTimeout('window.location="/channel/activity"',1000);
                             } else if (data.code == 0) {
                                 toastr.warning(data.msg);
                                 return false;
@@ -416,148 +409,122 @@
                                 toastr.error(data.msg);
                                 return false;
                             }
-
+    
                         })
                     }
                 });
             }
-
-
-
-
-            $(function () {
+    
+    
+    
+    
+            $(function(){
                 api.CopyText_modal();
-
+    
                 $('[data-operate="copy-links"]').each(function () {
                     new Clipboard(this).on('success', function (e) {
                         e.clearSelection();
                         toastr.success('复制成功');
                     });
                 });
-
-
+    
+    
             })
-
-            function chart_exportdata(cid) {
+    
+            function chart_exportdata (cid){
                 var sdate = $("input#start_date").val();
                 var edate = $("input#end_date").val();
-                sendData('/channel/line_chart?sdate=' + sdate + '&edate=' + edate, {
-                    is_ajax: '1',
-                    'cid': cid
-                }, function (data) {
-                    if (data.data) {
+                sendData( '/channel/line_chart?sdate='+sdate+'&edate='+edate, { is_ajax:'1', 'cid':cid }, function(data){
+                    if(data.data){
                         showchartdata(data.data);
                     }
                 });
             }
-
-            function first_day(cid) {
-                sendData('/channel/line_chart?daynum=1', {
-                    is_ajax: '1',
-                    'cid': cid
-                }, function (data) {
-                    if (data.data) {
+            function first_day (cid){
+                sendData( '/channel/line_chart?daynum=1', {  is_ajax:'1', 'cid':cid }, function(data){
+                    if(data.data){
                         showchartdata(data.data);
                     }
                 });
             }
-
-            function second_day(cid) {
-                sendData('/channel/line_chart?daynum=3', {
-                    is_ajax: '1',
-                    'cid': cid
-                }, function (data) {
-                    if (data.data) {
+    
+            function second_day (cid){
+                sendData( '/channel/line_chart?daynum=3', {  is_ajax:'1', 'cid':cid }, function(data){
+                    if(data.data){
                         showchartdata(data.data);
                     }
                 });
             }
-
-            function three_day(cid) {
-                sendData('/channel/line_chart?daynum=7', {
-                    is_ajax: '1',
-                    'cid': cid
-                }, function (data) {
-                    if (data.data) {
+    
+            function three_day (cid){
+                sendData( '/channel/line_chart?daynum=7', {  is_ajax:'1', 'cid':cid }, function(data){
+                    if(data.data){
                         showchartdata(data.data);
                     }
                 });
             }
-
-            function line_chart(cid) {
-                Ewin.alert({
-                    message: '<div class="row">' +
-                        '<div class="col-md-12 divwidth" >' +
-                        '<div class="panel-body form-horizontal"  id="curr_month">' +
-                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="first"  onclick="first_day(' +
-                        cid + ')">一天</button>&nbsp;' +
-                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="second" onclick="second_day(' +
-                        cid + ')">三天</button>&nbsp;' +
-                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="three"  onclick="three_day(' +
-                        cid + ')">七天</button>' +
-                        '<div class="form-group" style="  float: right;margin-right:20px; "><button type="button" class="btn" style="background-color:#3b86e0; color:#fff;" onclick="chart_exportdata(' +
-                        cid + ')">查询</button></div>' +
-                        '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="end_date" name="end_date" placeholder="结束日期"  value=""></div>' +
-                        '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="start_date" name="start_date" placeholder="开始日期"  value=""></div>' +
-                        '</div>' +
-                        '<div id="order_line_chart" ></div>' +
-                        '</div>' +
+    
+            function line_chart( cid ) {
+                Ewin.alert({message:
+                        '<div class="row">'+
+                        '<div class="col-md-12 divwidth" >'+
+                        '<div class="panel-body form-horizontal"  id="curr_month">'+
+                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="first"  onclick="first_day('+cid+')">一天</button>&nbsp;'+
+                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="second" onclick="second_day('+cid+')">三天</button>&nbsp;'+
+                        '<button type="button" class="btn" style="background-color:#3b86e0; color:#fff;"  value="three"  onclick="three_day('+cid+')">七天</button>'+
+                        '<div class="form-group" style="  float: right;margin-right:20px; "><button type="button" class="btn" style="background-color:#3b86e0; color:#fff;" onclick="chart_exportdata('+cid+')">查询</button></div>'+
+                        '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="end_date" name="end_date" placeholder="结束日期"  value=""></div>'+
+                        '<div class="form-group" style="  float: right;margin-right:20px; "><input type="text" class="form-control datetimepicker" id="start_date" name="start_date" placeholder="开始日期"  value=""></div>'+
+                        '</div>'+
+                        '<div id="order_line_chart" ></div>'+
+                        '</div>'+
                         '</div>',
-                    title: '引导数统计表',
-                    btnok: '关闭'
-                });
-
+                        title:'引导数统计表',
+                        btnok:'关闭'
+                    }
+                );
+    
                 $('input.datetimepicker').datetimepicker({
                     format: 'YYYY-MM-DD',
                     locale: moment.locale('zh-CN'),
                 });
-
-                $('.modal-sm').attr('style', 'width:90%;');
-
+    
+                $('.modal-sm').attr('style','width:90%;');
+    
                 var widths = $(window).width() * 0.9;
-
-                $('#order_line_chart').attr('style', 'width:' + widths + 'px;height:300px;');
-
-                sendData('/channel/line_chart', {
-                    is_ajax: '1',
-                    'cid': cid
-                }, function (data) {
-                    if (data) {
+    
+                $('#order_line_chart').attr('style','width:'+widths+'px;height:300px;');
+    
+                sendData( '/channel/line_chart', { is_ajax:'1','cid':cid}, function(data){
+                    if(data){
                         showchartdata(data.data);
                     }
-
+    
                 });
             }
-
-            function showchartdata(msg) {
-
+            function showchartdata(msg){
+    
                 var myChart = echarts.init(document.getElementById('order_line_chart'));
                 option = {
                     tooltip: {
                         trigger: 'axis'
                     },
-
-                    color: ['#3b86e0', '#ffc425', ],
+    
+                    color:['#3b86e0','#ffc425',],
                     legend: {
-                        data: [{
-                            name: '引导数',
-                            icon: 'image://https://static01.tengwen.com/backend/novel/img/tag-blue.png'
-                        }, {
-                            name: '新增用户',
-                            icon: 'image://https://static01.tengwen.com/backend/novel/img/tag-yellow.png'
-                        }, ],
-                        itemWidth: 36,
-                        itemHeight: 36,
-                        itemGap: 50,
+                        data:[{name:'引导数' , icon : 'image://https://static01.tengwen.com/backend/novel/img/tag-blue.png' },{name:'新增用户', icon : 'image://https://static01.tengwen.com/backend/novel/img/tag-yellow.png'},],
+                        itemWidth:36,
+                        itemHeight:36,
+                        itemGap:50,
                     },
-
+    
                     grid: {
                         left: '3%',
                         right: '6%',
                         bottom: '3%',
                         containLabel: true
                     },
-
+    
                     xAxis: {
                         type: 'category',
                         boundaryGap: false,
@@ -566,28 +533,157 @@
                     yAxis: {
                         type: 'value'
                     },
-                    series: [{
-                            name: '引导数',
-                            type: 'line',
-                            data: msg.clk
+                    series: [
+                        {
+                            name:'引导数',
+                            type:'line',
+                            data:msg.clk
                         },
                         {
-                            name: '新增用户',
-                            type: 'line',
-                            data: msg.users
-                        }
-                    ]
-
+                            name:'新增用户',
+                            type:'line',
+                            data:msg.users
+                        }]
+    
                 };
                 myChart.setOption(option);
                 myChart.showLoading();
-                if (msg) {
+                if(msg){
                     myChart.hideLoading();
                 }
             }
         </script>
 
     </div>
+    <div id="mdl1542696682264" class="modal fade in" role="dialog" aria-labelledby="modalLabel" style="display: block;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="modalLabel">创建活动链接</h4>
+                </div>
+                <div class="modal-body">
+                    <style type="text/css">
+                        .form-control {
+                            -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            -webkit-border-radius: 2px;
+                            -moz-border-radius: 2px;
+                            border-radius: 2px;
+                            border-color: #eaeaea;
+                            background-color: #fcfcfc;
+                        }
+
+                        .form-control:focus {
+                            -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            border-color: #d6d6d6;
+                            background-color: #fff;
+                        }
+
+                        .input-group {
+                            -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                            box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                        }
+
+                        .input-group .form-control,
+                        .input-group-addon,
+                        .input-group-btn {
+                            -moz-box-shadow: none;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                        }
+
+                        .input-group-addon {
+                            border: 1px solid #eaeaea;
+                        }
+                    </style>
+                    <form class="form-horizontal" id="dispatch-form">
+                        <input type="hidden" name="data[type]" value="0">
+                        <input type="hidden" name="data[ltype]" value="0">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3"><span class="required"></span> 选择模板</label>
+                            <div class="col-sm-7">
+                                <select class="select2 select2-hidden-accessible" name="data[template_id]" id="select2"
+                                    tabindex="-1" aria-hidden="true">
+                                    <option value="2">巨划算 充9.9元得2000书币！</option>
+                                    <option value="6">巨优惠 充88元得18800书币！</option>
+                                    <option value="7">充199元得50000书币！</option>
+                                    <option value="9">充10元送10元得2000书币</option>
+                                    <option value="10">充59元送69元得12800书币</option>
+                                    <option value="11">【双11】充11元送11元得2200书币</option>
+                                    <option value="12">【双11】充15元送15元得3000书币</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                    style="width: 317.46px;"><span class="selection"><span class="select2-selection select2-selection--single"
+                                            role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                            aria-labelledby="select2-select2-container"><span class="select2-selection__rendered"
+                                                id="select2-select2-container" title="巨划算 充9.9元得2000书币！">巨划算
+                                                充9.9元得2000书币！</span><span class="select2-selection__arrow" role="presentation"><b
+                                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                        aria-hidden="true"></span></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-3">任务名称</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="data[title]" value="">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">开始时间</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control datetimepicker" name="data[stime]" value="">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">结束时间</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control datetimepicker" name="data[etime]" value="">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">限购次数</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="data[limit_purchases]" value="">
+                                <p></p>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script type="text/javascript">
+                        $('.datetimepicker').datetimepicker({
+                            format: 'YYYY-MM-DD',
+                            locale: moment.locale('zh-CN'),
+                        });
+
+
+                        var totalWidth = $('.modal-dialog').width();
+
+                        var width = totalWidth / 1.89;
+
+                        if (width <= 200) {
+                            width = 250;
+                        }
+
+                        $('select.select2').select2({
+                            'width': width,
+                        });
+                    </script>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-default cancel" data-dismiss="modal">取消</button><button
+                        type="button" class="btn btn-success ok" data-dismiss="modal">保存创建</button><button type="button"
+                        class="btn btn-success prev" data-dismiss="modal" style="display: none;">上一页</button><button
+                        type="button" class="btn btn-success next" data-dismiss="modal" style="display: none;">下一页</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in"></div>
 </body>
 
 </html>
