@@ -627,6 +627,12 @@ ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
     color: #c7405d;
 }
 
+.text_moneyred {
+    color: #c12247;
+}
+.text_moneyyellow {
+    color: #dd965d;
+}
 ul.list-justify > li {
     margin-bottom: 5px;
 }

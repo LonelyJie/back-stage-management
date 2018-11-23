@@ -911,6 +911,20 @@ fieldset[disabled] .btn {
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }
+.btn-info.active, .btn-info:active, .open>.dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #04959e;
+    border-color: #04959e;
+}
+
+.btn-infojw {
+    color: #f1f1f1;
+    background-color: #04959e;
+}
+.table .dropdown-toggle {
+    height: 34px;
+}
+
 .panel .panel-note {
     font-size: 13px;
     line-height: 2.6;
