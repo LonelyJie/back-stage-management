@@ -1097,3 +1097,6 @@ label {
     width: 100px;
     height: 100px;
 }
+.table-hover > tbody > tr:hover {
+    background-color: #cccccc;
+  }
