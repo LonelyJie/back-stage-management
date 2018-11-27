@@ -5,7 +5,7 @@ html {
 
 body {
     background-color: #F3F5F8;
-    font-family: Helvetica, Verdana, "寰蒋闆呴粦", "Source Sans Pro", sans-serif;
+    font-family: Helvetica, Verdana, "微软雅黑", "Source Sans Pro", sans-serif;
     font-size: 14px;
     color: #676a6d;
 }
@@ -267,7 +267,7 @@ html.fullscreen-bg #wrapper {
     color:#333333;
     background-color: #2a3747;
 }
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a:hover {
     color: #fff;
 }
 
@@ -530,7 +530,7 @@ ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
 }
 
 .dropdown-menu > li > a {
-    color: #04959e;
+    color: #7a8dab;
 }
 
 .dropdown-menu > li i {
@@ -541,6 +541,7 @@ ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
 .dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
     background-color: #00AAFF;
 }
+
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover {
     color: #a3a3a3;
@@ -1003,6 +1004,7 @@ fieldset[disabled] .btn {
 
 .pagination {
     margin: 0;
+    font-size:14px;
 }
 
 .modal-body {
@@ -1103,3 +1105,9 @@ label {
     width: 100px;
     height: 100px;
 }
+
+.thead .tbody tr:hover {
+        background: green; 
+ 
+}
+
