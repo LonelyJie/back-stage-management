@@ -1113,5 +1113,8 @@ label {
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: #cccccc;
+    background-color: #e9ebec;
+  }
+  .container-fluid {
+      height: 50px;
   }
